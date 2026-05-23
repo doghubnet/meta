@@ -1,0 +1,15 @@
+alter table categories alter column criteria type jsonb using to_jsonb(criteria);
+alter table categories alter column criteria set default '[]'::jsonb;
+alter table nominees add column if not exists nomination_reason text;
+alter table nominees add column if not exists public_vote_count integer default 0;
+alter table nominees add column if not exists jury_score numeric default 0;
+alter table nominees add column if not exists community_choice_winner boolean default false;
+alter table nominees add column if not exists jury_choice_winner boolean default false;
+alter table nominations add column if not exists nominee_display_name text;
+alter table nominations add column if not exists nominee_website_url text;
+alter table nominations add column if not exists nominee_region text;
+alter table nominations add column if not exists accuracy_confirmed boolean default false;
+alter table nominations add column if not exists privacy_confirmed boolean default false;
+alter table data_deletion_requests add column if not exists status text default 'pending';
+create table if not exists judge_scores (id uuid primary key default gen_random_uuid(), nominee_id uuid references nominees(id), category_id uuid references categories(id), judge_id uuid references profiles(id), public_value_score integer, originality_score integer, consistency_score integer, credibility_score integer, community_response_score integer, notes text, created_at timestamptz default now(), updated_at timestamptz default now());
+alter table judge_scores enable row level security;

@@ -1,1 +1,2 @@
-export default function Page(){return <div className='card'><h1 className='text-2xl font-bold capitalize'>results</h1><p>Content for results page with legal, policy, and program details.</p></div>}
+import { nominees } from '@/lib/data';
+export default function Page(){return <div className='space-y-4'><h1 className='text-3xl font-bold'>Results & Leaderboard</h1><p>Public votes help select Community Choice winners. Jury Choice winners are selected through review criteria and admin verification.</p><div className='grid gap-4 md:grid-cols-2'>{nominees.map(n=><div key={n.slug} className='card'><h2 className='font-semibold'>{n.name}</h2><p>Community Choice score: {n.votes}</p><p>Jury Choice status: Under review</p></div>)}</div></div>}

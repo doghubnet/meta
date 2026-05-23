@@ -1,0 +1,1 @@
+export default function Page(){return <div className='space-y-3'><h1 className='text-3xl font-bold'>Admin nominees</h1><p>Manage nominees with moderation actions, filters, and audit-safe updates.</p></div>}

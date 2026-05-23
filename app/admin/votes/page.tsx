@@ -1,1 +1,1 @@
-export default function Page(){return <div className='card'><h1 className='text-2xl font-bold'>Admin votes</h1><p>Protected management screen.</p></div>}
+export default function Page(){return <div className='space-y-3'><h1 className='text-3xl font-bold'>Admin votes</h1><p>Manage votes with moderation actions, filters, and audit-safe updates.</p></div>}

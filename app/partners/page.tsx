@@ -1,1 +1,3 @@
-export default function Page(){return <div className='card'><h1 className='text-2xl font-bold capitalize'>partners</h1><p>Content for partners page with legal, policy, and program details.</p></div>}
+import { platformNote } from '@/lib/data';
+const tiers=['Founding Partner','Gold Partner','Silver Partner','Community Partner','Media Partner','Technology Partner'];
+export default function Page(){return <div className='space-y-4'><h1 className='text-3xl font-bold'>Partners & Sponsors</h1><p>Partner with us to support transparent recognition for Ethiopian creators and communities.</p><div className='grid gap-3 md:grid-cols-3'>{tiers.map(t=><div key={t} className='card'><h2 className='font-semibold'>{t}</h2><p>Visibility, community engagement, and social-impact alignment.</p></div>)}</div><p className='text-sm text-slate-300'>{platformNote}</p></div>}

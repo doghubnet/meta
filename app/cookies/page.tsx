@@ -1,1 +1,1 @@
-export default function Page(){return <div className='card'><h1 className='text-2xl font-bold capitalize'>cookies</h1><p>Content for cookies page with legal, policy, and program details.</p></div>}
+export default function Page(){return <div className='space-y-3'><h1 className='text-3xl font-bold'>Cookie Notice</h1><p>We use essential cookies for session handling, security checks, and basic analytics. You can manage cookie preferences in your browser settings.</p></div>}
