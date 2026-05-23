@@ -1,0 +1,2 @@
+import Link from 'next/link'; import { categories } from '@/lib/data';
+export default function Page(){return <div className='grid gap-4 md:grid-cols-2'>{categories.map(c=><article className='card' key={c.id}><h2 className='text-xl font-semibold'>{c.name}</h2><p className='text-sm text-slate-300'>Independent category for Ethiopian creators on Facebook and Instagram.</p><div className='mt-3 flex gap-2'><Link href={`/categories/${c.slug}`}>View nominees</Link><Link href='/nominate'>Nominate</Link></div></article>)}</div>}
