@@ -1,0 +1,1 @@
+export default function Page(){return <div className='card space-y-3'><h1 className='text-2xl font-bold'>Privacy Policy</h1><p>We collect only the data needed to manage nominations, voting, fraud prevention, communication, and award administration. We do not sell voter data.</p></div>}

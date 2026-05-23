@@ -1,0 +1,1 @@
+export default function Page(){return <div className='card space-y-3'><h1 className='text-2xl font-bold'>Rules and Eligibility</h1><p>Votes must come from real users. Automated voting, paid vote manipulation, fake accounts, and repeated abuse are not allowed. The organizing team may review, flag, or remove suspicious votes.</p></div>}

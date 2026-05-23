@@ -1,0 +1,1 @@
+export default function Page(){return <div className='card space-y-3'><h1 className='text-2xl font-bold'>Terms</h1><p>This independent awards program is not sponsored, endorsed, administered by, or associated with Meta, Facebook, or Instagram.</p></div>}
