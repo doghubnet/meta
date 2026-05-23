@@ -1,0 +1,4 @@
+export const disclaimer = 'This independent awards program is not sponsored, endorsed, administered by, or associated with Meta, Facebook, or Instagram.';
+export const categories = [
+'Best Facebook Educational Creator','Best Instagram Educational Creator','Best Reels Storyteller','Best Community Builder','Best Health Awareness Creator','Best Women Empowerment Advocate','Best Youth Impact Creator','Best AI and Tech Awareness Creator','Best Business and Entrepreneurship Creator','Best Small Business Brand on Social','Best Culture and Heritage Creator','Best Photography and Visual Storytelling','Best Nonprofit or Social Impact Page','Best Public Service Information Creator','Best Entertainment Creator','Best Faith and Values Content','Best Sports Community Creator','Rising Creator of the Year','Diaspora Voice of the Year','Changemaker of the Year'
+].map((name,i)=>({id:String(i+1),name,slug:name.toLowerCase().replace(/[^a-z0-9]+/g,'-')}));
